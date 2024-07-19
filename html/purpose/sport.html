@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../src/style.css" />
+    <link rel="stylesheet" href="../../src/style_space.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>YONSEISPACE</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../../src/login.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div style=" margin-left: 26px; float: left; width: 332px;">
+            <div style="margin: 0px 2px 8px;">
+                <a style="display: flex; margin-top: 16px; float: left; font-size: 18px; font-weight: 600" href="../../main.html">
+                  <span style="color: #0E3667;">YONSEI</span><span style="color: #686767;">SPACE</span>
+                </a>
+                <div class="account"><span class="material-symbols-outlined">account_circle</span></div>
+                <div id="open_login_modal"></div>
+            </div>
+            <a class="back" href="../purpose.html"><span class="material-symbols-outlined">arrow_back_ios</span><span style="margin-bottom: 2px;">체육시설</span></a>
+            <div class="space_list">
+                <div class="space_card" id="sport_center">
+                    <p class="text">스포츠센터 201</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">실내체육관</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="sport_center">
+                    <p class="text">스포츠센터 303</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="sport_center">
+                    <p class="text">스포츠센터 309</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 101</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                    </div>
+                    <p class="text_under">대운동장</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 201</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                    </div>
+                    <p class="text_under">풋살장</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 301</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                    </div>
+                    <p class="text_under">테니스장A</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 302</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                    </div>
+                    <p class="text_under">테니스장B</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 303</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                    </div>
+                    <p class="text_under">테니스장C</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 304</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                    </div>
+                    <p class="text_under">테니스장D</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 401</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                    </div>
+                    <p class="text_under">실외농구장A</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 402</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                    </div>
+                    <p class="text_under">실외농구장B</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 403</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                    </div>
+                    <p class="text_under">실외농구장C</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 404</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                    </div>
+                    <p class="text_under">실외농구장D</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 405</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                    </div>
+                    <p class="text_under">실외농구장E</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 501</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                    </div>
+                    <p class="text_under">족구장A</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 502</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                    </div>
+                    <p class="text_under">족구장B</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 601</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                    </div>
+                    <p class="text_under">배드민턴장</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="map">
+            <img src="../../photo/campus_map.png" style="height: 697px; border-radius: 30px; margin-top: 12px; margin-left: 42px;"> 
+        </div>
+    
+    </div>
+</body>
+</html>

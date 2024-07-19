@@ -1,0 +1,20 @@
+.space_list{
+    height: 610px;
+}
+
+#lecture{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/강의실.jpeg);
+    background-size: 180px, 328px;
+}
+#seminar{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/세미나실.jpg);
+    background-size: 180px, 328px;
+}
+#sport{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/체육시설.png);
+    background-size: 180px, 328px;
+}
+#studio{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/studio.jpg);
+    background-size: 180px, 328px;
+}

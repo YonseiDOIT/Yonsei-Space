@@ -1,0 +1,1860 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/style.css" />
+    <link rel="stylesheet" href="../src/style_personnel.css" />
+    <link rel="stylesheet" href="../src/style_space.css">
+    <link rel="stylesheet" href="../src/reservation.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>YONSEISPACE</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../src/login.js"></script>
+    <script src="../src/personel.js"></script>
+    <script src="../src/reservation.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div style=" margin-left: 26px; float: left; width: 332px;">
+            <div style="margin: 0px 2px 8px;">
+                <a style="display: flex; margin-top: 16px; float: left; font-size: 18px; font-weight: 600" href="../main.html">
+                  <span style="color: #0E3667;">YONSEI</span><span style="color: #686767;">SPACE</span>
+                </a>
+                <div class="account"><span class="material-symbols-outlined">account_circle</span></div>
+                <div id="open_login_modal"></div>
+            </div>
+            <div class="bar_frame">
+                <div class="box"><a href="../main.html">건물</a></div>
+                <div class="box"><a href="time.html">시간</a></div>
+                <div class="box"><a href="equipment.html">기자재</a></div>
+                <div class="box"><a href="purpose.html">용도</a></div>
+                <div class="focus box"><a href="personnel.html">인원</a></div>
+            </div>
+            <div class="input_n">
+                <input type="number" value="1" min="1" max="100">
+                <div class="material-symbols-outlined" id="plus">add</div>
+                <div class="material-symbols-outlined" id="minus">remove</div>
+            </div>
+            <div class="space_list" style="height: 562px;">
+                <div class="space_card" id="lecture_old">
+                    <p class="text">정의관 103</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture">
+                    <p class="text">정의관 105</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">노트북강의실습실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">정의관 108</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실/일반열람실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">정의관 111</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">정의관 114</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">정의관 117</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">정의관 150</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">세미나홀</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">정의관 151</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">세미나홀</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">정의관 152</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">세미나홀</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">정의관 215</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">LINC창업스튜디오/교수학습센터실습실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">정의관 350</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">세미나홀</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">정의관 351</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">세미나홀</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">정의관 449</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">사이버강의영상제작실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_stair">
+                    <p class="text">청송관 129</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">계단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">청송관 152</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">세미나홀</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_stair">
+                    <p class="text">청송관 185</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">계단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">청송관 208</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">청송관 305</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(영어영문학)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">청송관 308</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(영어영문학)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">청송관 331</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">문화예술산학협력생산LAB</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">청송관 405</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">청송관 408</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture">
+                    <p class="text">청송관 414</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">노트북강의실습실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">청송관 417</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(역사문화학)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">청송관 422</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(철학)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">청송관 557</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(디자인예술학부)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">청송관 559</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">청송관 564</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(국어국문학)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">청송관 569</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">청송관 572</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture">
+                    <p class="text">청송관 574</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">노트북강의실습실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture">
+                    <p class="text">청송관 577</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">노트북강의실습실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_stair">
+                    <p class="text">창조관 102</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">계단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">창조관 141</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">세미나홀</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_stair">
+                    <p class="text">창조관 184</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">계단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">창조관 427</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">창조관 456</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(화학및의화학)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">창조관 459</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(물리학)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">창조관 461</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">창조관 463</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">창조관 465</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(물리학)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">창조관 468</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">SWALC강의실습실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture">
+                    <p class="text">창조관 471</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">노트북강의실습실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">창조관 474</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(수학)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">창조관 476</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(패키징학)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture">
+                    <p class="text">창조관 506</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">노트북강의실습실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">창조관 508</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">창조관 511</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(패키징학)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture">
+                    <p class="text">창조관 515</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">노트북강의실습실(소프트웨어학부)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">창조관 518</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">대학원세미나실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">창조관 527</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">창조관 535</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(화학및의화학)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">백운관 120</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">구애련세미나홀</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_stair">
+                    <p class="text">백운관 121</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">계단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">백운관 320</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">디지털헬스케어SW강의실습실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">백운관 321</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">디지털헬스케어S강의실습실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">백운관 503</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">백운관 505</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">백운관 508</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">백운관 513</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">백운관 516</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">실습강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">백운관 523</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">백운관 526</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">백운관 531</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">백운관 534</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">백운관 537</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">백운관 541</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">보건과학대학원원우회</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">백운관 543</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">대학원세미나실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">미래관 139</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(100석)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">미래관 231</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(70석)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">미래관 234</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(70석)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">미래관 236</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">연구윤리회의실/연구지원실습실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">미래관 237</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(350석)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">미래관 239</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(100석)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">미래관 324</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">세미나실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">미래관 325</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">세미나실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">미래관 331</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(70석)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">미래관 339</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(100석)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">미래관 431</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">임상병리학과실험실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">미래관 434</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">임상병리학과표본실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">미래관 437</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">계단강의실(240석)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">미래관 439</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(100석)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">미래관 441</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실(70석)</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">미래관 531</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">전산실습실1</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">미래관 534</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">전산실습실2</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">미래관 538</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">전산실습실5</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">미래관 541</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">전산실습실4</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">미래관 543</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">전산실습실3</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 101</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">BK21융합강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 104</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">SLI첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 105</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">SLI첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 108</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">융합교육연구실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 109</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">융합교육연구실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 114</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">학습공동체활동실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 115</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">학습공동체활동실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 116</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">학습공동체활동실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 119</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">학습공동체활동실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 120</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">학습공동체활동실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 121</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">학습공동체활동실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 122</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">학습공동체활동실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 123</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">학습공동체활동실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 206</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">세미나실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 207</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">세미나실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 212</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">융합프로젝트실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 213</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">융합프로젝트실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 214</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">율합프로젝트실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture">
+                    <p class="text">컨버젼스홀 302</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 305</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">프로젝트실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 306</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">프로젝트실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 307</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">프로젝트실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 308</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">프로젝트실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 309</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">프로젝트실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 310</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">프로젝트실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 311</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">프로젝트실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 312</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">프로젝트실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 314</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">PC실습실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 315</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">PC실습실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 316</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">PC실습실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 318-1</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 318-2</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 319</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 320</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 321</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 322</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 323</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 B101</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">SLI첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 B102</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">SLI첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 B103</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">SLI첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">컨버젼스홀 B104</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">RC프로그램활동실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 B105</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">토론형강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 B106</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">SLI첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 B107</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">SLI첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 B108</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">SLI첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 B109</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">SLI첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 B110</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">SLI첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 B112</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">SLI첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 B113</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">SLI첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_new">
+                    <p class="text">컨버젼스홀 B114</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">SLI첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lecture_old">
+                    <p class="text">컨버젼스홀 B115</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">SLI첨단강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="hall">
+                    <p class="text">학생회관108</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">학생회관앞공연장</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="sport_center">
+                    <p class="text">스포츠센터 201</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">실내체육관</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="sport_center">
+                    <p class="text">스포츠센터 303</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="sport_center">
+                    <p class="text">스포츠센터 309</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">강의실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 101</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">대운동장</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 201</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">풋살장</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 301</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">테니스장A</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 302</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">테니스장B</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 303</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">테니스장C</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 304</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">테니스장D</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 401</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">실외농구장A</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 402</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">실외농구장B</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 403</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">실외농구장C</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 404</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">실외농구장D</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 405</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">실외농구장E</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 501</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">족구장A</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 502</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">족구장B</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="field">
+                    <p class="text">체육시설 601</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">배드민턴장</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="studio">
+                    <p class="text">노천극장 B113</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">거울연습실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="studio">
+                    <p class="text">노천극장 B116</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">중연습실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="hall">
+                    <p class="text">노천극장 B123</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">소극장</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">라돈프리하우스 101</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">세미나실</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+                <div class="space_card" id="lectue">
+                    <p class="text">라돈프리하우스 102</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-rounded" id="icon_equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">연세라돈안전인증센터</p>
+                    <div class="button under"><a href="">대관하기</a></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="content">
+            <div class="detail">
+                <img src="../photo/강의실.jpg" alt="">
+                <p id="title">
+                    <span>정의관 105</span>
+                    <div class="equip">
+                        <span class="material-symbols-rounded" id="equip">tv_gen</span>
+                        <span class="material-symbols-outlined" id="equip">videocam</span>
+                        <span class="material-symbols-outlined" id="equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="equip">computer</span>
+                    </div>
+                </p>
+                <p>
+                    <p id="button">수용인원:50명</p>
+                    <p id="button">용도:강의실</p>
+                    <p id="button">위치:정의관 1층</p>
+                </p>
+                <p id="description">
+                    정의관 1층에 위치한 강의실로 정원은 총 6명이며 마이크와 스피커 시스템, PC, TV가 제공됩니다.<br>
+                    기자재 현황<br>
+                    -오디오 : 마이크(유선) 2개, 서라운드 사운드 시스템<br>
+                    -PC : i3 9100, 8GB RAM, HD Graphics 620<br>
+                    -TV : 55” 4K
+                </p>
+            </div>
+            <div class="time_table">
+                <img src="../photo/Frame 114.png" alt="">
+                <a href="#" id="openModal">정의관 105 대관하기</a>
+                <script src="../src/reservation.js"></script>
+            </div>
+        </div>
+    </div>
+    <div id="modalContainer"></div>
+</body>
+</html>

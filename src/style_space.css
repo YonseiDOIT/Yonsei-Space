@@ -1,0 +1,70 @@
+*{
+    font-family: Pretandard;
+}
+
+.space_list{
+    height: 612px;
+}
+
+.back{
+    width: auto;
+    height: 40px;
+    color: #0E3667;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.back span{
+    display: inline-block;
+}
+
+.back .material-symbols-outlined{
+    height: 28px;
+    font-size: 24px;
+}
+
+
+#lecture{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/강의실.jpg);
+    background-size: 180px, 328px;
+}
+#lecture_old{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/강의실.jpeg);
+    background-size: 180px, 328px;
+}
+#lecture_new{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/신형강의실.jpg);
+    background-size: 180px, 328px;
+}
+#lecture_stair{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/계단형_강의실.jpg);
+    background-size: 180px, 328px;
+}
+#seminar{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/seminar.jpg);
+    background-size: 180px, 328px;
+}
+#studio{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/연습실.png);
+    background-size: 180px, 328px;
+}
+#hall{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/hall.jpg);
+    background-size: 180px, 328px;
+}
+#small_room{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/small_room.jpg);
+    background-size: 180px, 328px;
+}
+#lab{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/실험실.jpg);
+    background-size: 180px, 328px;
+}
+#sport_center{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/sportcenter.webp);
+    background-size: 180px, 328px;
+}
+#field{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/체육시설.png);
+    background-size: 180px, 328px;
+}

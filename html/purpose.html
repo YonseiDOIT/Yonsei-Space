@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/style.css" />
+    <link rel="stylesheet" href="../src/style_purpose.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>YONSEISPACE</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../src/login.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div style=" margin-left: 26px; float: left; width: 332px;">
+            <div style="margin: 0px 2px 8px;">
+                <a style="display: flex; margin-top: 16px; float: left; font-size: 18px; font-weight: 600" href="../main.html">
+                  <span style="color: #0E3667;">YONSEI</span><span style="color: #686767;">SPACE</span>
+                </a>
+                <div class="account"><span class="material-symbols-outlined">account_circle</span></div>
+                <div id="open_login_modal"></div>
+            </div>
+            <div class="bar_frame">
+                <div class="box"><a href="../main.html">건물</a></div>
+                <div class="box"><a href="time.html">시간</a></div>
+                <div class="box"><a href="equipment.html">기자재</a></div>
+                <div class="focus box"><a href="purpose.html">용도</a></div>
+                <div class="box"><a href="personnel.html">인원</a></div>
+            </div>
+            <div class="space_list">
+                <div class="space_card" id="lecture">
+                    <p class="text">강의실</p>
+                    <div class="button"><a href="purpose/lecture.html">대관하기</a></div>
+                </div>
+                <div class="space_card" id="seminar">
+                    <p class="text">세미나실</p>
+                    <div class="button"><a href="purpose/seminar.html">대관하기</a></div>
+                </div>
+                <div class="space_card" id="sport">
+                    <p class="text">체육시설</p>
+                    <div class="button"><a href="purpose/sport.html">대관하기</a></div>
+                </div>                
+                <div class="space_card" id="studio">
+                    <p class="text">공연장/연습실</p>
+                    <div class="button"><a href="purpose/studio.html">대관하기</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="map">
+            <img src="../photo/campus_map.png" style="height: 697px; border-radius: 30px; margin-top: 12px; margin-left: 42px;"> 
+        </div>
+    
+    </div>
+</body>
+</html>

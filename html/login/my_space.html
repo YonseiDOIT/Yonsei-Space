@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../src/style.css" />
+    <link rel="stylesheet" href="../../src/style_space.css" />
+    <link rel="stylesheet" href="../../src/my_space.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>YONSEISPACE</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../../src/login.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div style=" margin-left: 26px; float: left; width: 332px;">
+            <div style="margin: 0px 2px 8px;">
+                <a style="display: flex; margin-top: 16px; float: left; font-size: 18px; font-weight: 600" href="../../main.html">
+                  <span style="color: #0E3667;">YONSEI</span><span style="color: #686767;">SPACE</span>
+                </a>
+                <div class="account"><span class="material-symbols-outlined">account_circle</span></div>
+                <div id="open_login_modal"></div>
+            </div>
+            <div class="menu_tab">
+                <a class="menu active" href="my_space.html"><span class="material-symbols-outlined">list</span><span class="name">나의 대관현황</span></a>
+                <a class="menu" href="manage_account.html"><span class="material-symbols-outlined">manage_accounts</span><span class="name">계정 설정</span></a>
+                <a class="menu" href="notice.html"><span class="material-symbols-outlined">notifications_active</span><span class="name">공지사항</span></a>
+                <a class="menu logout" href="../../main.html"><span class="material-symbols-outlined">logout</span><span class="name">로그아웃</span></a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="title"><span class="material-symbols-outlined">list</span><span class="name">나의 대관현황</span></div>
+            <div class="frame">
+                <div class="space_card" id="lecture">
+                    <p class="text">컨버젼스홀 B114</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">SLI첨단강의실</p>
+                    <div class="button under"><a href="">수정하기</a></div>
+                </div>
+                <div class="info">
+                    사용시간 <br>
+                    <div class="info_time">7월 19일 금요일</div>
+                    <div class="info_time">13:00</div>
+                    <div class="info_time">15:00</div> <br>
+                    김연세, 010-1234-5678 <br>
+                    동아리 발표회, 30명, 동아리 발표회
+                </div>
+            </div>
+            <div class="frame">
+                <div class="space_card" id="lecture">
+                    <p class="text">컨버젼스홀 B114</p>
+                    <div class="equip_icon">
+                        <span class="material-symbols-outlined" id="icon_equip">videocam</span>
+                        <span class="material-symbols-outlined" id="icon_equip">mic_external_on</span>
+                        <span class="material-symbols-outlined" id="icon_equip">computer</span>
+                    </div>
+                    <p class="text_under">SLI첨단강의실</p>
+                    <div class="button under" style="background-color: #686767;"><a href="">사용완료</a></div>
+                </div>
+                <div class="info">
+                    사용시간 <br>
+                    <div class="info_time">5월 16일 목요일</div>
+                    <div class="info_time">19:00</div>
+                    <div class="info_time">21:00</div> <br>
+                    김연세, 010-1234-5678 <br>
+                    동아리 발표회, 30명, 동아리 발표회
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

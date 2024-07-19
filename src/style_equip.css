@@ -1,0 +1,50 @@
+.scroll{
+    width: 328px;
+    height: 36px;
+    margin: 6px 0px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.tab_list{
+    cursor: pointer;
+    display: inline-block;
+    color: #686767;
+    background-color: #FFFFFF;
+    width: auto;
+    height: 32px;
+    border-radius: 9999px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    margin: 2px 0px 2px 2px;
+    user-select: none;
+}
+
+.tab_list.active{
+    background-color: #0E3667;
+    color: #FFFFFF;
+}
+.tab{
+    background-color: transparent;
+    margin: 2px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#icon{
+    background-color: transparent;
+    height: 24px;
+    font-size: 20px;
+    margin-top: 4px;
+}
+#txt{
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 4px;
+}
+
+

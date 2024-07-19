@@ -1,0 +1,230 @@
+.menu_tab{
+    width: 332px;
+    padding: 2px;
+}
+
+.menu{
+    display: flex;
+    padding: 10px 10px 8px;
+    width: 328px;
+    height: 48px;
+    border-radius: 9999px;
+    color: #686767;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    margin-bottom: 8px;
+}
+
+.menu .name{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.menu .material-symbols-outlined{
+    
+    margin-top: 2px;
+    margin-left: 10px;
+}
+
+.menu.active{
+    color: #0E3667;
+}
+
+.logout{
+    margin-top: 407px;
+}
+
+.content{
+    display: inline-block;
+    width: 816px;
+    height: 656px;
+    padding: 23px 32px;
+    margin-top: 16px;
+    margin-left: 42px;
+    background-color: #FFFFFF;
+    border-radius: 32px;
+}
+
+.content span{
+    color: #0E3667;
+    background-color: transparent;
+}
+
+.title{
+    width: 752px;
+    background-color: transparent;
+    margin-bottom: 13px;
+}
+
+.name{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 3px;
+    margin-left: 8px;
+    background-color: transparent;
+}
+.material-symbols-outlined{
+    display: inline-block;
+    height: 28px;
+    font-size: 24px;
+    background-color: transparent;
+}
+
+.frame{
+    margin: 4px 0px;
+    background-color: transparent;
+}
+
+.info{
+    display: inline-block;
+    vertical-align:top;
+    width: 328px;
+    height: 180px;
+    margin-left: 32px;
+    padding: 16px 0px;
+    color: #0E3667;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.info_time{
+    display: inline-block;
+    height: 40px;
+    padding: 12px 26px;
+    margin: 16px 1px;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: transparent;
+    border-radius: 9999px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+}
+
+.form{
+    width: 328px;
+    padding: 2px;
+    background-color: transparent;
+}
+
+.form p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #0E3667;
+    background-color: transparent;
+}
+
+.input{
+    width: 324px;
+    height: 40px;
+    border-radius: 9999px;
+    background-color: transparent;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"]{
+    width: 296px;
+    height: 20px;
+    background-color: transparent;
+    color: #686767;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+.notice{
+    display: flex;
+    width: 752px;
+    height: 48px;
+    padding: 10px 0px;
+    background-color: transparent;
+}
+
+.post_title{
+    display: inline-block;
+    height: 24px;
+    margin: 1px 8px 3px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.post_date{
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.post{
+    display: none;
+    width: 816px;
+    height: 656px;
+    padding: 23px 32px;
+    margin-top: 16px;
+    margin-left: 42px;
+    background-color: #FFFFFF;
+    border-radius: 32px;
+}
+
+.back{
+    width: auto;
+    height: 40px;
+    color: #0E3667;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.back span{
+    display: inline-block;
+    background-color: transparent;
+}
+
+.back .material-symbols-outlined{
+    height: 28px;
+    font-size: 24px;
+}
+
+#date{
+    color: #686767;
+    background-color: transparent;
+    font-size: 18px;
+}
+#date span{
+    background-color: transparent;
+    margin-right: 18px;
+}
+
+#file{
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 132px;
+    padding: 9px 12px 7px;
+    margin-right: 8px;
+    vertical-align: top;
+    border-radius: 9999px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    color: #0E3667;
+    background-color: transparent;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+#file span{
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+#words{
+    width: 752px;
+    word-break: keep-all;
+    color: #000000;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 150%;
+}

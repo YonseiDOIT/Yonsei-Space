@@ -1,0 +1,42 @@
+.space_list{
+    height: 610px;
+}
+
+
+/* 사진첨부를 위한 id */
+#jeongui{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/정의관_01.jpg);
+    background-size: 180px, 328px;
+}
+#cheongsong{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/청송관_01.jpg);
+    background-size: 180px, 328px;
+}
+#changjo{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/창조관_01.jpg);
+    background-size: 180px, 328px;
+}
+#baekwoon{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/백운관_01.jpg);
+    background-size: 180px, 328px;
+}
+#mirae{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/미래관_01.jpg);
+    background-size: 180px, 328px;
+}
+#convergence{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/컨버젼스홀.jpg);
+    background-size: 180px, 328px;
+}
+#student_union{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/대학본부1.jpg);
+    background-size: 180px, 328px;
+}
+#amphitheater{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/노천극장_01.jpg);
+    background-size: 180px, 328px;
+}
+#radon_free{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0) 50%), url(../photo/라돈프리_하우스_01.JPG);
+    background-size: 180px, 328px;
+}
